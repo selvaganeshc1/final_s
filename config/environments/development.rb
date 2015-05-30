@@ -4,7 +4,12 @@ FinalS::Application.configure do
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
+SHOPIFY_API_KEY = "a76d9d5646b2eb37a2fdb9e781c1ffdc"
+SHOPIFY_SHARED_SECRET = "cdf05280b09cc480740a967fb265e0dc"
+DOMAIN = "http://localhost:3000"
+
   config.cache_classes = false
+
 
   # Do not eager load code on boot.
   config.eager_load = false

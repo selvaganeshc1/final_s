@@ -9,6 +9,31 @@
 <body>
 
 <%= yield %>
-
+<a class="brand" href="/">Contestapp</a>
+<div class="container-fluid nav-collapse">
+<ul class="nav">
+<li><%= link_to "Products", products_path%></li>
+<li><%= link_to "Accounts", accounts_path%></li>
+<li><%= link_to "Orders", orders_path %></li>
+</ul>
+ <div class="row-fluid">
+<% if content_for?(:sidebar) %>
+<div class="span3">
+<div class="well sidebar-nav">
+<%= yield(:sidebar) %>
+</div>
+</div>
+<div class="span9">
+<%= bootstrap_flash %>
+<%= yield %>
+</div>
+<% else %>
+<div class="span12">
+<%= bootstrap_flash %>
+<%= yield %>
+</div>
+<% end %>
+</div>
+</div>
 </body>
 </html>

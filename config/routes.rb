@@ -1,4 +1,20 @@
 FinalS::Application.routes.draw do
+ 
+  resources :orders
+
+  resources :products do
+collection do
+get 'import'
+end
+resources :variants
+end
+
+resources :accounts do
+member do
+get 'test_connection'
+end
+end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
